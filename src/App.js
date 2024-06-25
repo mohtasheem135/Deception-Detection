@@ -6,39 +6,24 @@ import Contact from "./pages/Contact";
 import Header from "./components/Header";
 import Login from "./pages/Login";
 import Upload from "./pages/Upload";
+import Result from "./pages/Result";
 import axios from "axios";
 import Footer from "./components/Footer";
 
 function App() {
-  const [data, setData] = useState([]);
   
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await axios.get(`http://localhost:4000/artworks`);
-        console.log("res", res);
-        setData(res?.data?.artworks);
-        const message = res?.data?.message || "success";
-        // console.log(message);
-      } catch (error) {
-        const message = error?.response?.data?.message || "some error occurred";
-        console.error(message, error);
-      }
-    };
-
-    fetchData();
-  }, []);
 
   return (
     <Router>
-      {/* <Header /> */}
+      <Header />
       <div className="content">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/gallery" element={<Gallery GalleryData={data} />} />
+          <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/upload" element={<Upload  />} />
+          <Route path="/result" element={<Result  />} />
         </Routes>
       </div>
       {/* <Footer /> */}

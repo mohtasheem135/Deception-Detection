@@ -13,12 +13,12 @@ const Header = () => {
   return (
     <header className="header">
       <div className="logo">
-        <Link to="/">art'sU</Link>
+        <Link to="/">Multi-Modal Deception Detection</Link>
       </div>
       <div className="nav-container">
         <nav className="nav">
           <div className="border-0 border-black flex w-[1300px] items-center justify-between">
-            <ul>
+            {/* <ul>
               <li>
                 <Link to="/">Home</Link>
               </li>
@@ -33,14 +33,14 @@ const Header = () => {
                   <Link to="/login">Login</Link>
                 </li>
               ) : null}
-            </ul>
-            {localStorage.getItem("session") ? (
+            </ul> */}
+            {/* {localStorage.getItem("session") ? (
               <ul>
                 <li className="cursor-pointer" onClick={(e) => handleLogOut(e)}>
                   Logout
                 </li>
               </ul>
-            ) : null}
+            ) : null} */}
           </div>
         </nav>
       </div>
