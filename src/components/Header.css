@@ -1,0 +1,68 @@
+.header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .logo {
+    z-index: 1; /* Ensure the logo is above the nav */
+  }
+  
+  .logo a {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 1.5em;
+    color: #ff6347;
+    text-decoration: none;
+  }
+  
+  .nav-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav ul li {
+    margin: 0;
+  }
+  
+  .nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+  }
+  
+  .nav ul li a:hover {
+    color: #ff6347;
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+    }
+  
+    .logo {
+      margin-bottom: 10px;
+    }
+  
+    .nav-container {
+      position: static;
+      transform: none;
+    }
+  
+    .nav ul {
+      flex-direction: row; /* Ensure nav items remain in a row */
+      justify-content: center;
+      gap: 10px;
+    }
+  }
